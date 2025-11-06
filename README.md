@@ -1,0 +1,1 @@
+# zabbix-switchs-discovery-scripts
