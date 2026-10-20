@@ -1,0 +1,5 @@
+requests
+# discoverySwCisco.py usa a API asyncio do pysnmp (pysnmp.hlapi.v3arch.asyncio)
+pysnmp>=7
+# discoverySwHuawei.py; precisa da net-snmp instalada no sistema (ex.: apt install libsnmp-dev)
+easysnmp

@@ -1,5 +1,7 @@
 # zabbix-switchs-discovery-scripts
 
+[![CI](https://github.com/Thithio/zabbix-switchs-discovery-scripts/actions/workflows/ci.yml/badge.svg)](https://github.com/Thithio/zabbix-switchs-discovery-scripts/actions/workflows/ci.yml) ![Licença MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-blue)
+
 Scripts em Python que varrem uma faixa de IPs por SNMP, encontram switches de acesso e cadastram no Zabbix os que ainda não existem, já com template, grupos e interface SNMP. No fim, mandam um e-mail com a lista de hosts criados.
 
 Nasceram para manter o inventário de switches de campus em dia sem cadastro manual.
@@ -34,8 +36,7 @@ Não versione credenciais reais. Se for rodar em produção, leia esses valores 
 ## Requisitos
 
 ```bash
-pip install requests pysnmp      # Cisco
-pip install requests easysnmp    # Huawei (precisa da net-snmp instalada no sistema)
+pip install -r requirements.txt   # o easysnmp precisa da net-snmp instalada no sistema
 ```
 
 ## Uso
@@ -46,3 +47,9 @@ python3 discoverySwHuawei.py
 ```
 
 Dá para agendar no cron do servidor do Zabbix para a descoberta rodar sozinha.
+
+Veja também [ansible-snmpv3-switches](https://github.com/Thithio/ansible-snmpv3-switches), que configura SNMPv3 e trap nos mesmos switches.
+
+## Licença
+
+MIT
